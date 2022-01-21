@@ -14,31 +14,23 @@ on:
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
-        default: 'v3_10.0'
+        default: 'v3_9.0'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/SGCMarkus/android_device_lge_flashlmdd-twrp'
-      DEVICE_COMMON_URL:
-        description: 'DEVICE_COMMON_URL'
-        required: true
-        default: 'https://github.com/SGCMarkus/android_device_lge_sm8150-common-twrp'
+        default: 'https://github.com/KatoTempest/motorola_pokerp'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'android-10'
+        default: 'twrp'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/lge/flashlmdd'
-      DEVICE_COMMON_PATH:
-        description: 'DEVICE_COMMON_PATH'
-        required: true
-        default: 'device/lge/sm8150-common'
+        default: 'device/motorola/pokerp'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'flashlmdd'
+        default: 'pokerp'
 
 jobs:
   build:
