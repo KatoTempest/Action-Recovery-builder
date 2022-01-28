@@ -22,7 +22,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'twrp'
+        default: 'old-blobs'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
