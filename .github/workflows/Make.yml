@@ -18,19 +18,19 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/KatoTempest/android_device_motorola_pokerp.git'
+        default: 'https://github.com/ferhzzoma/device_motorola_fiji.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'old-blobs'
+        default: 'staging/twrp'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/motorola/pokerp'
+        default: 'device/motorola/fiji'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'pokerp'
+        default: 'fiji'
 
 jobs:
   build:
