@@ -37,11 +37,13 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     runs-on: ubuntu-18.04
     
+    - name: Fix up git URLs
+      run: echo -e '[url "https://github.com/"]\n  insteadOf = "git@github.com:"' >> ~/.gitconfig
+
     steps:
     - name: Check Out
       uses: actions/checkout@main   
-    - name: Fix up git URLs
-      run: echo -e '[url "https://github.com/"]\n  insteadOf = "git@github.com:"' >> ~/.gitconfig
+
    - name: Prepare the environment
       run: |
         docker rmi `docker images -q`
