@@ -41,7 +41,10 @@ jobs:
     - name: Check Out
       uses: actions/checkout@main
       
-    - name: Prepare the environment
+    - name: Fix up git URLs
+      run: echo -e '[url "https://github.com/"]\n  insteadOf = "git@github.com:"' >> ~/.gitconfig
+  
+   - name: Prepare the environment
       run: |
         docker rmi `docker images -q`
         sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/sudo apt/sources.list.d
@@ -58,9 +61,6 @@ jobs:
         echo "::set-output name=date::$(date +%F)"
       id: var
 
-    - name: Fix up git URLs
-      run: echo -e '[url "https://github.com/"]\n  insteadOf = "git@github.com:"' >> ~/.gitconfig
-      
     - name: Install repo
       run: |
         mkdir ~/bin
